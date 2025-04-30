@@ -2,7 +2,7 @@ declare function _default<K, V>(as?: (id: number) => K): NextResolver<K, V>;
 export default _default;
 export type Resolve<V_1> = (value?: V_1 | null) => void;
 export type Reject = (error?: any | null) => void;
-export type WithResolvers<V_1> = {
+export type Resolvers<V_1> = {
     promise: Promise<V_1>;
     resolve: Resolve<V_1>;
     reject: Reject;

@@ -1,7 +1,6 @@
 //@ts-check
 
-//@ts-ignore
-const withResolvers = Promise.withResolvers.bind(Promise);
+import withResolvers from '@webreflection/utils/with-resolvers';
 
 /**
  * @template V
@@ -18,7 +17,7 @@ const withResolvers = Promise.withResolvers.bind(Promise);
 
 /**
  * @template V
- * @typedef {object} WithResolvers
+ * @typedef {object} Resolvers
  * @prop {Promise<V>} promise
  * @prop {Resolve<V>} resolve
  * @prop {Reject} reject
@@ -48,7 +47,7 @@ const withResolvers = Promise.withResolvers.bind(Promise);
  * @returns
  */
 export default (as = (id => /** @type {K} */(id))) => {
-  /** @type {Map<K,WithResolvers<V>>} */
+  /** @type {Map<K,Resolvers<V>>} */
   const map = new Map;
   let id = 0;
   return /** @type {NextResolver<K,V>} */([
@@ -57,7 +56,7 @@ export default (as = (id => /** @type {K} */(id))) => {
       let uid;
       do { uid = as(id++) }
       while (map.has(uid));
-      const wr = withResolvers();
+      const wr = /** @type {Resolvers<V>} */(/** @type {unknown} */(withResolvers()));
       map.set(uid, wr);
       return [uid, wr.promise];
     },
