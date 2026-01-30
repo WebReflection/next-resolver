@@ -38,9 +38,10 @@
   "homepage": "https://github.com/WebReflection/next-resolver#readme",
   "devDependencies": {
     "c8": "^10.1.3",
-    "typescript": "^5.8.3"
+    "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@webreflection/utils": "^0.1.1"
+    "@webreflection/utils": "^0.1.1",
+    "weak-id": "^0.2.1"
   }
 }

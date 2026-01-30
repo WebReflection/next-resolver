@@ -1,6 +1,7 @@
 //@ts-check
 
 import withResolvers from '@webreflection/utils/with-resolvers';
+import i32 from 'weak-id/i32';
 
 /**
  * @template V
@@ -49,12 +50,12 @@ import withResolvers from '@webreflection/utils/with-resolvers';
 export default (as = (id => /** @type {K} */(id))) => {
   /** @type {Map<K,Resolvers<V>>} */
   const map = new Map;
-  let id = 0;
+  const next = i32();
   return /** @type {NextResolver<K,V>} */([
     /** @type {Next<K,V>} */
     () => {
       let uid;
-      do { uid = as(id++) }
+      do { uid = as(next()) }
       while (map.has(uid));
       const wr = /** @type {Resolvers<V>} */(/** @type {unknown} */(withResolvers()));
       map.set(uid, wr);
