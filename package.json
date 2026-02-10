@@ -41,7 +41,7 @@
     "typescript": "^5.9.3"
   },
   "dependencies": {
-    "@webreflection/utils": "^0.1.1",
+    "@webreflection/utils": "^0.1.2",
     "weak-id": "^0.2.1"
   }
 }
