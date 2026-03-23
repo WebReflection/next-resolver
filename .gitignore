@@ -3,5 +3,10 @@
 v8.log
 coverage/
 dist/
+build/
+*.egg-info/
+.eggs/
+*.egg
 node_modules/
 coincident-*
+__pycache__/
