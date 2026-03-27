@@ -85,6 +85,10 @@ def next_resolver(typed = int):
     while True:
       uid = typed(id)
       id += 1
+
+      if id == 2147483648:
+        id *= -1
+
       if not uid in map:
         break
 
