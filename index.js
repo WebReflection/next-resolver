@@ -1,7 +1,7 @@
 //@ts-check
 
 import withResolvers from '@webreflection/utils/with-resolvers';
-import i32 from 'weak-id/i32';
+import i32 from '@webreflection/utils/id';
 
 /**
  * @template V
