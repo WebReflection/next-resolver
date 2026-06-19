@@ -46,7 +46,6 @@
     }
   },
   "dependencies": {
-    "@webreflection/utils": "^0.3.6",
-    "weak-id": "^0.2.1"
+    "@webreflection/utils": "^0.3.6"
   }
 }
