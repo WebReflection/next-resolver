@@ -64,9 +64,11 @@ export default (as = (id => /** @type {K} */(id))) => {
     /** @type {Resolver<K,V>} */
     (uid, value, error) => {
       const wr = map.get(uid);
-      map.delete(uid);
-      if (error) wr?.reject(error);
-      else wr?.resolve(value);
+      if (wr) {
+        map.delete(uid);
+        if (error) wr.reject(error);
+        else wr.resolve(value);
+      }
     },
   ]);
 };
