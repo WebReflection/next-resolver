@@ -4,6 +4,15 @@
 
 <sup>**Social Media Photo by [Jan Genge](https://unsplash.com/@jan_genge) on [Unsplash](https://unsplash.com/)**</sup>
 
+- - -
+
+⚠️ **MOVED**
+
+This utility was really a few lines extra out of `@webreflection/utils` so it's been moved [in there](https://github.com/WebReflection/utils/tree/main/src#next-resolver).
+
+This repository will be kept as it is because of Python variant/integration but if you need this utility in JS please use [@webreflection/utils](https://webreflection.github.io/utils/) module instead.
+
+- - -
 
 A utility to simpify the repeated *unique ID* + *promise* dance.
 
